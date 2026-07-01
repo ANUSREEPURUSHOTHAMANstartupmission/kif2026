@@ -1,0 +1,91 @@
+---
+const events = [
+    {
+        title: "Startup & Product Showcase",
+        description: "Meet innovative startups and discover new products",
+        icon: "/img/2026/e1.svg",
+        color: "text-blue-600",
+    },
+    {
+        title: "Founder & Investor Meetups",
+        description: "Connect with founders, investors and business leaders",
+        icon: "/img/2026/e2.svg",
+        color: "text-green-600",
+    },
+    {
+        title: "Workshops & Expert Talks",
+        description: "Learn from successful entrepreneurs and industry experts",
+        icon: "/img/2026/e3.svg",
+        color: "text-orange-500",
+    },
+    {
+        title: "Student Innovation Expo",
+        description: "See ideas and projects from young innovators and students",
+        icon: "/img/2026/e4.svg",
+        color: "text-purple-600",
+    },
+    {
+        title: "She Leads",
+        description: "Celebrating women entrepreneurs and leaders",
+        icon: "/img/2026/e5.svg",
+        color: "text-pink-600",
+    },
+    {
+        title: "SDG Summit",
+        description: "Showcasing innovations that create social and environmental impact",
+        icon:"/img/2026/e6.svg",
+        image: "/img/2026/sdg-wheel.svg",
+    },
+    {
+        title: "Creators Summit",
+        description: "Bringing together creators, artists, designers and storytellers.",
+        icon: "/img/2026/e7.svg",
+        color: "text-cyan-600",
+    },
+    {
+        title: "Robotics, Drone & AR/VR Zone",
+        description: "Experience the latest technologies firsthand",
+        icon: "/img/2026/e8.svg",
+        color: "text-blue-600",
+    },
+    {
+        title: "Fab Lab & Maker Pavilion",
+        description: "A space for makers, builders and inventors",
+        icon: "/img/2026/e9.svg",
+        color: "text-orange-500",
+    },
+    {
+        title: "Hackathons & Challenges",
+        description: "Work on real-world problems and build innovative solutions",
+        icon: "/img/2026/e10.svg",
+        color: "text-red-600",
+    },
+    {
+        title: "Food & Music Festival",
+        description: "Enjoy Kerala's food, culture and creative experiences",
+        icon: "/img/2026/e11.svg",
+        color: "text-green-600",
+    },
+];
+---
+
+<section class="pb-20 bg-white">
+    <div class="px-5 lg:px-20 mx-auto">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {
+                events.map((event) => (
+                    <div class="rounded-2xl border border-gray-300 bg-white p-6 transition-all duration-300">
+                        <div class="flex gap-5 items-center">
+                            <img src={event.icon} alt={event.title} class="w-12 h-12 object-contain" />
+                            <div>
+                                <h3 class="text-base font-semibold leading-tight text-gray-900">{event.title}</h3>
+
+                                <p class="mt-2 text-xs leading-5 text-gray-700">{event.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

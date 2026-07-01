@@ -1,0 +1,120 @@
+---
+const pillars = [
+  {
+    title: "Artificial Intelligence",
+    image: "/img/2026/f1.svg",
+    description:
+      "Explore how AI is changing businesses, industries and everyday life.",
+    border: "#3B82F6",
+    bg: "#F5F9FF",
+    titleColor: "#2563EB",
+  },
+  {
+    title: "DeepTech",
+    image: "/img/2026/f2.svg",
+    description:
+      "Discover robotics, drones, advanced technologies and future innovations.",
+    border: "#EF4444",
+    bg: "#FFF5F5",
+    titleColor: "#EF4444",
+  },
+  {
+    title: "Sustainability",
+    image: "/img/2026/f3.svg",
+    description:
+      "Learn about climate solutions, green technologies and sustainable development.",
+    border: "#4CAF50",
+    bg: "#F4FFF4",
+    titleColor: "#15803D",
+  },
+  {
+    title: "Creative Economy",
+    image: "/img/2026/f4.svg",
+    description:
+      "See how creativity, culture, design and technology come together.",
+    border: "#F59E0B",
+    bg: "#FFF9ED",
+    titleColor: "#EA8A00",
+  },
+  {
+    title: "FoodTech",
+    image: "/img/2026/f5.svg",
+    description:
+      "Explore innovation in food, agriculture and sustainable food systems.",
+    border: "#16A34A",
+    bg: "#F3FCF8",
+    titleColor: "#0F766E",
+  },
+];
+---
+
+<section class=" bg-white ">
+  <div class="mx-auto px-5 lg:px-20  w-full">
+        <div class="flex items-center justify-center pb-6">
+            <span class="inline-block  text-black px-8 py-2 rounded-md text-2xl font-bold ">
+                The Five Focus Areas
+            </span>
+        </div>
+
+
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+
+      {pillars.map((pillar) => (
+        <div
+          class="group rounded-2xl border p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          style={`border-color:${pillar.border};background:${pillar.bg};`}
+        >
+          <!-- Image -->
+          <div class="flex justify-center">
+            <img
+              src={pillar.image}
+              alt={pillar.title}
+              class="h-36 object-contain transition duration-300 group-hover:scale-105"
+            />
+          </div>
+
+          <!-- Title -->
+          <h3
+            class=" text-base font-semibold leading-tight"
+            style={`color:${pillar.titleColor}`}
+          >
+            {pillar.title}
+          </h3>
+
+          <!-- Description -->
+          <p class="mt-4 text-sm text-gray-600">
+            {pillar.description}
+          </p>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
+
+<style is:global>
+    .card-gradient-ai {
+  background: linear-gradient(180deg, #ffffff 0%, #f5f9ff 100%);
+}
+
+.card-gradient-red {
+  background: linear-gradient(180deg, #ffffff 0%, #fff6f6 100%);
+}
+
+.card-gradient-green {
+  background: linear-gradient(180deg, #ffffff 0%, #f5fff7 100%);
+}
+
+.card-gradient-yellow {
+  background: linear-gradient(180deg, #ffffff 0%, #fffbf2 100%);
+}
+
+.kif-card {
+  transition: all 0.35s ease;
+}
+
+.kif-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+}
+</style>

@@ -1,0 +1,106 @@
+---
+	import '../styles/global.css'
+	import Navbar from "../components/Navbar.astro";
+
+	const { title } = Astro.props;
+
+	const description = "The Kerala Innovation Festival (KIF) is a celebration of ideas, creativity, and collaboration. It's where startups, creators, investors, policymakers, and students come together to shape the future through innovation.";
+	const url = "https://innovationfestival.in/";
+
+---        
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+		<!-- Primary Meta Tags -->
+		<meta name="title" content={title} >
+		<meta name="description" content={description}>
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content={url}>
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={description}>
+		<meta property="og:image" content={url + 'img/fb_image.jpg'}>
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content={url}>
+		<meta property="twitter:title" content={title}>
+		<meta property="twitter:description" content={description}>
+		<meta property="twitter:image" content={url + 'img/fb_image.jpg'}>
+
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+		<script defer data-domain="innovationfestival.in" src="https://analytics.huddleglobal.co.in/js/plausible.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" is:inline></script>
+
+  <!-- wowBook scripts -->
+  <script src="/flipbook/js/compressed.js" is:inline></script>
+  <script src="/flipbook/js/pdf.combined.min.js" is:inline></script>
+  <script src="/flipbook/js/flipbook.min.js" is:inline></script>
+
+<script is:inline>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '652196522633465');
+	fbq('track', 'PageView');
+</script>
+
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=652196522633465&ev=PageView&noscript=1"></noscript>
+
+
+
+<style is:global>
+	.manjari-thin {
+  font-family: "Manjari", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.manjari-regular {
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.manjari-bold {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+</style>
+
+	</head>
+	<body class="overflow-x-hidden w-screen min-w-screen">
+		<!-- <Navbar></Navbar> -->
+		
+		<slot />
+
+		
+		<script>
+			import '../../node_modules/aos/dist/aos.css';
+			import AOS from 'aos';
+			AOS.init();
+		</script>
+	</body>
+</html>
+

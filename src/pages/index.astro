@@ -1,0 +1,430 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Countdown from "../components/Countdown.svelte";
+import Speakers from "../components/Speakers.svelte";
+import Stats from "../components/Stats.astro";
+import Why from "../components/Why.astro";
+import Highlight from "../components/Highlight.astro";
+import Kochi from "../components/Kochi.astro";
+import Faq from "../components/Faq.astro";
+import Navbar from "../components/Navbar.astro";
+import Whatsapp from '../components/Whatsapp.astro';
+import Agenda from "../components/Agendamain.svelte";
+import Focusareas from '../components/Focusareas.astro';
+import WhoAttend from '../components/WhoAttend.astro';
+import Expect from '../components/Expect.astro';
+
+
+const features = [
+  {
+    color: "text-red-500",
+    title: "SDG-driven innovation",
+  },
+  {
+    color: "text-green-500",
+    title: "Inclusive and Future-ready",
+  },
+  {
+    color: "text-sky-500",
+    title: "For everyone, by everyone",
+  },
+];
+
+// import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+---
+
+<Layout title="Kerala Innovation Festival | Kerala Startup Mission">
+
+  <!-- <Whatsapp></Whatsapp> -->
+
+	<Navbar></Navbar>
+
+	<main id="home" class=" py-24  px-5 lg:px-20 pb-2 bg-white w-screen flex flex-col items-center justify-center">
+		<div class="flex items-center flex-col lg:flex-row justify-center w-full h-full ">
+			<div class="lg:w-2/5 w-full">
+				<div class="">
+					<div class=" uppercase font-bold md:text-5xl text-4xl tracking-wider  ">
+						KERALA <br> INNOVATION<br> FESTIVAL 2026
+					</div>
+					<div class="text-[#038D2D] md:text-[24px] text-lg pt-4" style="font-weight: 500;">
+						Shaping the Future of Innvoation
+					</div>
+					<div class="pb-4 md:text-base text-sm">
+						Where innovators, SDGs and fun come together
+					</div>
+
+					<div class="space-y-2">
+						<div class="flex gap-4">
+							<div>
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+								</svg>
+							</div>
+							<div class="font-semibold text-lg">25-26 September 2026</div>
+						</div>
+						<div class="flex gap-4">
+							<div>
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+								<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+								</svg>
+							</div>
+							<div class="font-semibold text-lg">Kerala Startup Mission, Kochi </div>
+						</div>
+					</div>
+
+					
+					<div class="flex flex-wrap gap-2 flex-row lg:gap-5 pt-4" data-aos="fade-right" data-aos-duration="1000" >
+						<div class="">
+							<a href="https://tickets.startupmission.in/kerala-innovation-festival" target="_blank" class="items-center justify-center gap-2.5 flex font-sans rounded-md bg-[#e5243b] border border-[#e5243b] w-fit py-2 md:text-lg px-3 text-white text-base">Register Now <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+								</svg>
+								</a>
+						</div>
+						<div class="">
+							<a href="https://tickets.startupmission.in/kerala-innovation-festival" target="_blank" class="inline-block font-sans rounded-md border border-black  w-fit py-2 md:text-lg px-3 text-black text-base">Explore Programs</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class=" lg:w-3/5 w-full" >
+				<img src="/img/2026/home2026.svg" data-aos="zoom-in-down" class="w-full py-10 " />
+			</div>
+		</div>
+		<div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2  gap-2 sm:gap-3  w-full h-auto">
+			<div class="bg-white shadow border border-[#eaeaea] rounded-2xl p-4 px-6">
+				<div class="flex gap-2">
+					<div><img class=" max-w-10 min-w-10" src="/img/2026/c1.svg"></div>
+					<div>
+						<p class="font-semibold text-lg md:text-xl">10,000+</p>
+						<p class="text-xs">Participants</p>
+					</div>
+				</div>
+			</div>
+			<div class="bg-white shadow border border-[#eaeaea] rounded-2xl p-4 px-6">
+				<div class="flex gap-2">
+					<div><img class=" max-w-10 min-w-10" src="/img/2026/c2.svg"></div>
+					<div>
+						<p class="font-semibold text-lg md:text-xl">200+</p>
+						<p class="text-xs">Speakers</p>
+					</div>
+				</div>
+			</div>
+			<div class="bg-white shadow border border-[#eaeaea] rounded-2xl p-4 px-6">
+				<div class="flex gap-2">
+					<div><img class=" max-w-10 min-w-10" src="/img/2026/c3.svg"></div>
+					<div>
+						<p class="font-semibold text-lg md:text-xl">50+</p>
+						<p class="text-xs">Programs</p>
+					</div>
+				</div>
+			</div>
+			<div class="bg-white shadow border border-[#eaeaea] rounded-2xl p-4 px-6">
+				<div class="flex gap-2">
+					<div><img class=" max-w-10 min-w-10" src="/img/2026/c4.svg"></div>
+					<div>
+						<p class="font-semibold text-lg md:text-xl">150+</p>
+						<p class="text-xs">Showcases</p>
+					</div>
+				</div>
+			</div>
+			<div class="bg-white shadow border border-[#eaeaea] rounded-2xl p-4 px-6">
+				<div class="flex gap-2">
+					<div><img class=" max-w-10 min-w-10" src="/img/2026/c5.svg"></div>
+					<div>
+						<p class="font-semibold text-lg md:text-xl">100+</p>
+						<p class="text-xs">Partners</p>
+					</div>
+				</div>
+			</div>
+			<div class="bg-white shadow border border-[#eaeaea] rounded-2xl p-4 px-6">
+				<div class="flex gap-2">
+					<div><img class=" max-w-10 min-w-10" src="/img/2026/c6.svg"></div>
+					<div>
+						<p class="font-semibold text-lg md:text-xl">5+</p>
+						<p class="text-xs">Sector Summits</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+
+<section class="bg-white  py-20 px-5 lg:px-20">
+  <div class="mx-auto">
+    <div class="grid gap-4 lg:grid-cols-2 items-center">
+      <div>
+        <p class="text-red-500 font-semibold tracking-wide uppercase text-sm">About KIF</p>
+
+        <h2 class="mt-3 text-3xl font-bold leading-tight text-gray-900">
+          India's Largest Innovation Festival
+        </h2>
+
+        <p class="mt-3 text-gray-600 leading-6">
+          Kerala Innovation Festival is the flagship event of Kerala Startup
+          Mission (KSUM), the Government of Kerala's agency for startup and
+          entrepreneurship development.
+        </p>
+
+        <p class="mt-2 text-gray-600 leading-6">
+          KIF 2026 will bring together innovators, entrepreneurs, students,
+          investors, researchers and creators from across India and around the
+          world. The festival is a platform to discover new ideas, showcase
+          innovations, build partnerships and explore future opportunities.
+        </p>
+
+        <div class="mt-4 space-y-4">
+          {features.map((item) => (
+            <div class="flex items-center gap-4">
+              <span class={`text-3xl ${item.color}`}>✷</span>
+              <span class="text-lg font-semibold text-gray-900">
+                {item.title}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <a href="#" class="mt-6 inline-flex items-center gap-4 rounded-xl bg-neutral-900 px-8 py-4 text-white font-semibold text-sm hover:bg-black transition">
+          Know More About KIF
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 12h14M13 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="relative rounded-3xl border  border-gray-200 bg-[#F8F2E8] p-8 shadow-lg w-full ">
+        <h3 class="text-sm font-semibold leading-7 md:pb-20 max-w-3xl text-gray-900 text-slart items-start justify-start ">
+          India's largest innovation festival, bringing together startups, students, innovators, investors, creators, industry leaders and policymakers to learn, connect and collaborate.
+        </h3>
+        <div class="flex md:flex-row flex-col pb-10">
+			<div class="md:w-1/3 w-full flex flex-col items-center justify-center">
+				<img src="/img/2026/svg.svg" class="flex pb-8">
+				<div class=" grid grid-cols-2 gap-3 z-20 w-full">
+					<div class="border border-[#8B8B8B] rounded-xl bg-[#F8F2E8] px-4 py-2">
+						<div class="text-xs font-semibold leading-none">
+							SDG
+						</div>
+						<div class="text-xs  mt-2">
+							Driven
+						</div>
+					</div>
+					<div class="border border-[#8B8B8B] rounded-xl bg-[#F8F2E8] px-4 py-2 ">
+						<div class="text-xs font-semibold leading-none">
+							17 SDGs
+						</div>
+						<div class="text-xs  mt-2">
+							1 Future
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex flex-col md:w-2/3 right-0 top-20 md:absolute  w-full">
+				<img src="/img/2026/a1.svg" alt=""class=""/>
+			</div>
+		</div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<div>
+	<Focusareas></Focusareas>
+</div>
+<div>
+	<WhoAttend></WhoAttend>
+</div>
+
+
+<div>
+	<img src="/img/2026/kif.svg" class="w-screen overflow-hidden">
+</div>
+
+<div>
+	<Why></Why>
+</div>
+<div>
+	<div class="flex items-center justify-center pb-6">
+		<span class="inline-block  text-black px-8 py-2 rounded-md text-2xl font-bold ">
+			What to Expect
+		</span>
+	</div>
+	
+	<Expect></Expect>
+</div>
+	<section class="py-10 lg:py-24 relative hidden">
+		<div class="px-5 lg:px-20 mx-auto p-5 md:p-0">
+			<div class="rounded-2xl bg-kif-dark-blue text-white p-10">
+				<div class="text-3xl text-center font-bold mb-5">Partner with us at Kerala Innovation Festival</div>
+				<div class="text-xl text-center">Join India's Largest Innovation Festival</div>
+				<div class="text-xl text-center">Connect with Startups, Investors and Industry Leaders to spark ideas and drive impact</div>
+
+				<div class="flex items-center justify-center mt-5">
+					<a href="mailto:nasif@startupmission.in"  class="inline-flex items-center justify-center group rounded-full bg-kif-dark-blue hover:bg-kif-blue border-2 border-kif-blue hover:border-kif-dark-blue text-white font-bold p-2 pl-5 transition-all duration-300">
+						Partner With Us!
+						<span class="bg-kif-blue text-white p-2 rounded-full ml-2 -rotate-45 group-hover:rotate-0 group-hover:bg-kif-dark-blue transition duration-300">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact" class="relative">
+		<div class="px-5 lg:px-20 mx-auto">
+			<div class="flex flex-col md:flex-row items-center justify-center">
+				<div class="md:w-1/2 w-full">
+					<iframe title="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15714.13294256542!2d76.3542335!3d10.0553212!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeaddd199d9bbde2b!2sKerala%20Technology%20Innovation%20Zone%20(KTIZ)!5e0!3m2!1sen!2sin!4v1648204144344!5m2!1sen!2sin" width="100%" height="300" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<div class="md:w-1/2 w-full">
+					<div class="p-10 text-center flex flex-col items-center justify-center">
+						<img src="/img/logo.svg" class="h-32 mb-3" alt="Logo" />
+						<div class="mb-5">
+							<div class="font-bold md:text-2xl font-josefin">Kerala Technology Innovation Zone</div>
+							<div class="">Kinfra Hi Tech Park, Kalamassery, Kochi</div>
+						</div>
+						<div class="mb-5">
+							<div class="text-sm mb-3">
+								<!-- For More Details &amp; <br />Partnership Opportunities Contact: -->
+								Partnership Opportunities, contact:
+							</div>
+							<div class="font-bold">Nasif NM</div>
+							<div class="">nasif@startupmission.in</div>
+						</div>
+
+						<div class=" flex flex-row gap-3 item-center jstify-center">
+							<span>Follow us:</span>
+							<a href="https://www.instagram.com/keralainnovationfestival/" target="_blank" class="hover:text-kif-dark-blue">
+								<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+							</a>
+							<a href="https://www.linkedin.com/company/kerala-startup-mission/" target="_blank" class="hover:text-kif-dark-blue">
+								<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg>
+							</a>
+							<a href="https://www.youtube.com/channel/UCGnD5pg8MOIetz93sEvCHbw" target="_blank" class="hover:text-kif-dark-blue">
+								<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+							</a>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="w-full mt-10 border-t-2 border-gray-200">
+		<div class="text-sm px-5 py-3 text-center">
+			Copyright © 2025 | <a href="https://startupmission.kerala.gov.in/" target="_blank" class="hover:text-blue-500">Kerala Startup Mission</a>
+		</div>
+	</section>
+
+	<script>
+		import Plyr from "plyr";
+		var player = new Plyr("#youtube_player", {
+			controls: [],
+			hideControls: true,
+			// clickToPlay: false,
+			resetOnEnd: true,
+			youtube: {
+				noCookie: true, // Use youtube-nocookie.com
+				modestbranding: 1, // Hide YouTube logo
+				rel: 0, // No related videos after playback
+				showinfo: 0, // Hide video title
+				iv_load_policy: 3, // Hide annotations
+				disablekb: 1, // Disable keyboard controls
+			},
+		});
+
+		document.addEventListener("DOMContentLoaded", function () {
+			document.getElementById("youtube-main-px-5 lg:px-20")?.classList.remove("lg:h-[35rem]");
+		});
+
+		document.querySelector(".video-play-btn")?.addEventListener("click", function () {
+			document.getElementById("youtube-px-5 lg:px-20")?.classList.remove("hidden");
+			player.play();
+			document.querySelector(".video-play-btn")?.classList.add("hidden");
+			document.getElementById("youtube-main-px-5 lg:px-20")?.classList.add("bg-transparent");
+			document.getElementById("youtube-main-px-5 lg:px-20")?.classList.add("lg:h-[35rem]");
+		});
+
+		player.on("pause", (event) => {
+			const instance = event.detail.plyr;
+			document.querySelector(".video-play-btn")?.classList.remove("hidden");
+			document.getElementById("youtube-px-5 lg:px-20")?.classList.add("hidden");
+			document.getElementById("youtube-main-px-5 lg:px-20")?.classList.remove("lg:h-[35rem]");
+		});
+	</script>
+
+	<script>
+		import { gsap } from "gsap";
+
+		document.querySelector("#programs-grid")?.addEventListener("mousemove", (e) => {
+			document
+				.querySelector("#programs-grid")
+				?.querySelectorAll(".pitem")
+				.forEach((item) => {
+					const rect = item.getBoundingClientRect();
+					const dx = e.clientX - (rect.left + rect.width / 2);
+					const dy = e.clientY - (rect.top + rect.height / 2);
+					const distance = Math.sqrt(dx * dx + dy * dy);
+
+					if (distance < 150) {
+						// React if within 150px
+						const angle = Math.atan2(dy, dx);
+						const force = Math.min(200 / distance, 20);
+						gsap.to(item, {
+							x: Math.cos(angle) * -force * 20,
+							y: Math.sin(angle) * -force * 20,
+							ease: "power2.out",
+							duration: 0.5,
+						});
+					}
+				});
+		});
+
+		document.querySelector("#programs-grid")?.addEventListener("mouseleave", () => {
+			gsap.to(".pitem", {
+				x: 0,
+				y: 0,
+				ease: "elastic.out(1, 0.5)",
+				duration: 1.5,
+			});
+		});
+	</script>
+
+	<script>
+		document.querySelectorAll("a.page-scroll").forEach((anchor) => {
+			anchor.addEventListener("click", function (e) {
+				e.preventDefault();
+				const targetId = e.target?.getAttribute("href").replace("/#", "");
+				const targetElement = document.getElementById(targetId);
+				if (targetElement) {
+					targetElement.scrollIntoView({
+						behavior: "smooth",
+					});
+				}
+			});
+		});
+	</script>
+
+	<script>
+		import Typed from 'typed.js';
+
+		const typed = new Typed('.typewriter', {
+			strings: ['Innovate the Future. <br> Celebrate the Decade.'],
+			typeSpeed: 50,
+			cursorChar: "",
+			startDelay: 1000,
+		});
+	</script>
+</Layout>

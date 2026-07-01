@@ -1,0 +1,115 @@
+---
+const items = [
+  {
+    title: "Learn",
+    desc: "Hear from experts, founders and industry leaders",
+  },
+  {
+    title: "Connect",
+    desc: "Meet startups, investors, corporates and innovators",
+  },
+  {
+    title: "Discover",
+    desc: "Explore new technologies, products and ideas",
+  },
+  {
+    title: "Showcase",
+    desc: "Present your startup, product or innovation",
+  },
+  {
+    title: "Collaborate",
+    desc: "Build partnerships and find new opportunities",
+  },
+];
+---
+
+<section class="mx-auto px-5 lg:px-20 py-12">
+  <div class="border border-[#23864C] rounded-2xl">
+
+    <div class="flex flex-col lg:flex-row lg:items-center p-5 gap-6 lg:gap-0">
+
+      <!-- Left -->
+      <div class="lg:w-[330px]">
+
+        <div class="flex items-center gap-3">
+          <img src="/img/2026/w1.svg" class="w-7 h-7" alt="" />
+
+          <h2 class="font-bold text-lg text-[#16843E]">
+            Who Should Attend?
+          </h2>
+        </div>
+
+        <p class="mt-4 text-sm leading-6">
+          Startups, Students, Innovators, Policy makers,
+          Creators, Professionals, Aspiring Entrepreneurs.
+        </p>
+
+      </div>
+
+      <!-- Desktop Divider -->
+      <div class="hidden lg:block w-px h-16 bg-[#23864C] mx-5"></div>
+
+      <!-- Why Attend -->
+      <div class="lg:w-[140px] text-center">
+        <h3 class="font-bold text-lg text-[#16843E]">
+          Why Attend?
+        </h3>
+      </div>
+
+      <!-- Cards -->
+      <div
+        class="flex-1 bg-white rounded-2xl shadow-[0_4px_18px_rgba(0,0,0,.08)] p-4">
+
+        <!-- Mobile -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:hidden">
+
+          {
+            items.map((item) => (
+              <div class="border rounded-xl p-4">
+
+                <h4 class="font-semibold text-base">
+                  {item.title}
+                </h4>
+
+                <p class="text-xs mt-2 leading-5">
+                  {item.desc}
+                </p>
+
+              </div>
+            ))
+          }
+
+        </div>
+
+        <!-- Desktop -->
+        <div class="hidden lg:flex">
+
+          {
+            items.map((item, index) => (
+              <div
+                class={`flex-1 px-4 ${
+                  index !== items.length - 1
+                    ? "border-r border-gray-300"
+                    : ""
+                }`}>
+
+                <h4 class="font-semibold text-base">
+                  {item.title}
+                </h4>
+
+                <p class="text-xs mt-2 leading-5">
+                  {item.desc}
+                </p>
+
+              </div>
+            ))
+          }
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
