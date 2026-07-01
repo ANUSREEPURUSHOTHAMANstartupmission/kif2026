@@ -1,0 +1,59 @@
+---
+const { videoId = "HIF2EIAIz30" } = Astro.props;
+---
+
+<!-- POPUP -->
+<div
+	id="videoModal"
+	class="fixed inset-0 hidden items-center justify-center bg-black/80 z-[9999]"
+>
+	<div class="relative w-full max-w-5xl aspect-video">
+
+		<!-- Close -->
+		<button
+			id="closeVideo"
+			class="absolute -top-10 right-0 text-white text-4xl"
+		>
+			&times;
+		</button>
+
+		<iframe
+			id="youtubeFrame"
+			class="w-full h-full rounded-2xl"
+			src=""
+			frameborder="0"
+			allow="autoplay; encrypted-media; picture-in-picture"
+			allowfullscreen
+		></iframe>
+
+	</div>
+</div>
+
+<script is:inline>
+	const videoId = "HIF2EIAIz30";
+
+	const modal = document.getElementById("videoModal");
+	const closeBtn = document.getElementById("closeVideo");
+	const iframe = document.getElementById("youtubeFrame");
+
+	function openVideo() {
+		modal.classList.remove("hidden");
+		modal.classList.add("flex");
+
+		iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+	}
+
+	function closeVideo() {
+		modal.classList.add("hidden");
+		modal.classList.remove("flex");
+		iframe.src = "";
+	}
+
+	window.openVideoPopup = openVideo;
+
+	closeBtn?.addEventListener("click", closeVideo);
+
+	modal?.addEventListener("click", (e) => {
+		if (e.target === modal) closeVideo();
+	});
+</script>

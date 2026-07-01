@@ -11,6 +11,8 @@ import Agenda from "../components/Agendamain.svelte";
 import Focusareas from '../components/Focusareas.astro';
 import WhoAttend from '../components/WhoAttend.astro';
 import Expect from '../components/Expect.astro';
+import VideoPopup from "../components/VideoPopup.astro";
+
 
 
 const features = [
@@ -45,7 +47,7 @@ const features = [
 						KERALA <br> INNOVATION<br> FESTIVAL 2026
 					</div>
 					<div class="text-[#038D2D] md:text-[24px] text-lg pt-4" style="font-weight: 500;">
-						Shaping the Future of Innvoation
+						Shaping the Future of Innovation
 					</div>
 					<div class="pb-4 md:text-base text-sm">
 						Where innovators, SDGs and fun come together
@@ -80,10 +82,12 @@ const features = [
 								</a>
 						</div>
 						<div class="">
-							<a href="https://tickets.startupmission.in/kerala-innovation-festival" target="_blank" class="inline-block font-sans rounded-md border border-black  w-fit py-2 md:text-lg px-3 text-black text-base">Explore Programs</a>
+							<a href="#programs" target="_blank" class="inline-block font-sans rounded-md border border-black  w-fit py-2 md:text-lg px-3 text-black text-base">Explore Programs</a>
 						</div>
 					</div>
-
+					<div class="pt-4">
+						<Countdown date="2026-09-25T09:00" client:load />
+					</div>
 				</div>
 			</div>
 			<div class=" lg:w-4/5 w-full" >
@@ -184,20 +188,14 @@ const features = [
           ))}
         </div>
 
-        <a href="#" class="mt-6 inline-flex items-center gap-4 rounded-xl bg-neutral-900 px-8 py-4 text-white font-semibold text-sm hover:bg-black transition">
-          Know More About KIF
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 12h14M13 5l7 7-7 7"/>
-          </svg>
-        </a>
+      <a
+	href="#"
+	onclick="event.preventDefault(); openVideoPopup();"
+	class="mt-6 inline-flex items-center gap-4 rounded-xl bg-neutral-900 px-8 py-4 text-white font-semibold text-sm hover:bg-black transition"
+>
+	Know More About KIF
+</a>
+		
       </div>
 
       <div class="relative rounded-3xl border  border-gray-200 bg-[#F8F2E8] p-8 shadow-lg w-full ">
@@ -236,7 +234,7 @@ const features = [
     </div>
   </div>
 </section>
-
+<VideoPopup videoId="HIF2EIAIz30" />
 <div>
 	<Focusareas></Focusareas>
 </div>
