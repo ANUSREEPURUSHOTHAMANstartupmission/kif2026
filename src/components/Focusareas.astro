@@ -57,11 +57,11 @@ const pillars = [
         </div>
 
 
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5" data-aos="fade-down" data-aos-duration="500" data-aos-offset="100">
 
       {pillars.map((pillar) => (
         <div
-          class="group rounded-2xl border p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          class="group rounded-2xl border p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl" 
           style={`border-color:${pillar.border};background:${pillar.bg};`}
         >
           <!-- Image -->
