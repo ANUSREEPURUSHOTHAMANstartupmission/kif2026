@@ -26,6 +26,8 @@ const keralaStats = [
   },
 ];
 
+import FlipbookViewer from '../components/FlipbookViewer.astro';
+
 const benefits = ["Build brand visibility", "Connect with future talent", "Meet startups and founders", "Showcase products and services", "Support innovation and entrepreneurship", "Create meaningful business opportunities"];
 ---
 
@@ -75,13 +77,18 @@ const benefits = ["Build brand visibility", "Connect with future talent", "Meet 
               }
             </div>
 
-            <button class=" mt-6 w-fit bg-[#E53935] hover:bg-red-700 transition text-white px-7 py-3 rounded-lg font-semibold flex items-center gap-3">
+           <div class="flex gap-2 sm:flex-row flex-col w-full items-center ">
+            <FlipbookViewer></FlipbookViewer>
+
+             <button class=" mt-6 w-fit bg-[#E53935] hover:bg-red-700 transition text-white px-7 py-3 rounded-lg font-semibold flex items-center gap-3">
               Partner with Us
               <span class="text-xl">→</span>
             </button>
+           </div>
+
           </div>
           <div class=" w-full h-full">
-            <img src="/img/2026/partner.svg" class=" hidden md:flex md:absolute right-0 top-52 w-1/2" alt="Partner" />
+            <img src="/img/2026/partner.svg" class=" hidden md:flex md:absolute right-0 top-24 w-1/2 p-4" alt="Partner" />
           </div>
         </div>
       </div>

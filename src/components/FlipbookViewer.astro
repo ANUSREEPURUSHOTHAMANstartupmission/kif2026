@@ -2,7 +2,7 @@
 
 let seventh=
 [
-  {"id":"Brochure","link":"/pdf/KIF 2025 Brochure (1).pdf","img":"/img/logo.svg","title":"Newsletter May 2025"},
+  {"id":"Brochure","link":"/pdf/KIF 2026.pdf","img":"/img/logo.svg","title":"Newsletter May 2025"},
 ]
 ---
 
@@ -10,7 +10,7 @@ let seventh=
    
 
 
-<div class="container">
+<div class="">
   {seventh.map((item) => (
     <div id={item.id}></div>
 
@@ -19,7 +19,7 @@ let seventh=
 
 {seventh.map((item) => (
                        
-    <p data-pdf={item.link} data-id={item.id} class="inline-block hover:text-kif-green page-scroll cursor-pointer" aria-current="page">Brochure</p>
+    <p data-pdf={item.link} data-id={item.id} class="mt-6 w-fit border  transition text-black px-7 py-3 rounded-lg font-semibold flex items-center gap-3 cursor-pointer" aria-current="page">Partnership Brochure</p>
 
 ))}
 
